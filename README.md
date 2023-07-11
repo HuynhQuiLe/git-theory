@@ -4,8 +4,8 @@
 
 **Step 2: link repo-local with repo-remote:**  git remote add origin https://github.com/HuynhQuiLe/samar.git
 
-**Step 3: Push code into remote :**  
-  git add -A 
-  git commit -m "content"
-  git push -u origin main (1st push)
-  git push (from 2nd push)
+**Step 3: Push code into remote :**  <br />
+  git add -A <br />
+  git commit -m "content" <br />
+  git push -u origin main (1st push) <br />
+  git push (from 2nd push) <br />
