@@ -25,4 +25,12 @@
 **NOTE** <br />
 <br />
 **REMOVE ORIGIN:** git remove origin<br />
+**COMPARE CLONE & PULL** <br />
+git clone<br />
+Lệnh này sẽ sao chép toàn bộ dữ liệu và thiết lập trên remote repository, tức là
+nó sẽ tự động tạo một local repository trên máy tính của bạn sau khi chạy lệnh.
+Lệnh này *chỉ nên sử dụng khi bạn cần tạo mới một dự án Git* trên máy tính.<br />
+• git pull<br />
+Lệnh này sẽ chỉ *lấy những dữ liệu có sự thay đổi từ remote repository* đem về
+cập nhật cho local repository<br />
 
