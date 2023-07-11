@@ -8,7 +8,7 @@
 **Step 3: Push code into remote :**  <br />
   git add -A <br />
   git commit -m "content" <br />
-  git push -u origin main (1st push) <br />
+  git push -u origin main (1st push - compare with when *remote haven't had the branch*  ) <br />
   git push (from 2nd push) <br />
 <br />
 <br />
