@@ -12,6 +12,8 @@
   git push (from 2nd push) <br />
 <br />
 <br />
+
+
 **BRANCH** <br />
 <br />
 **LIST BRANCH:** git branch<br />
@@ -29,9 +31,33 @@
 
 <br />
 <br />
+**CLONE** <br />
+<br />
+**Step 1: clone git from remote - crate "child folder" inside the folder at terminal:** git clone https://github.com/quangsiDev/demo_git -> repo is "child folder" so we must be cd into "child folder"<br />
+**Step 1.1: clone git from remote - put "all file" inside the folder at terminal:** git clone https://github.com/quangsiDev/demo_git .<br />
+**Step 2: create new branch and code in the new one :** git checkout -b new<br />
+--> if whne we code in new and fail -> come to main -> clone code again -> careate new branch -> code in the new one again
+
+
+<br />
+<br />
+**PULL** <br />
+<br />
+**Step 1: get latest code :** git pull<br />
+
+<br />
+<br />
+**RESTORE THE OLD CODE** <br />
+<br />
+**undo the lastest code campare with the last commit :** git stash<br />
+**undo the old code from old commit:** git <br />
+
+<br />
+<br />
 **NOTE** <br />
 <br />
 **REMOVE ORIGIN:** git remove origin<br />
+**REVIEW COMMIT HISTORY:** git log<br />
 **COMPARE CLONE & PULL** <br />
 git clone<br />
 Lệnh này sẽ sao chép toàn bộ dữ liệu và thiết lập trên remote repository, tức là
