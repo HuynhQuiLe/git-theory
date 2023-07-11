@@ -1,5 +1,5 @@
 # git-theory
 
-**create- repo local:** git innit \n
+**create- repo local:** git innit \
 
 **link repo remote-local:** 
