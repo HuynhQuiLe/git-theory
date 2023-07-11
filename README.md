@@ -40,3 +40,5 @@ Lệnh này *chỉ nên sử dụng khi bạn cần tạo mới một dự án G
 Lệnh này sẽ chỉ *lấy những dữ liệu có sự thay đổi từ remote repository* đem về
 cập nhật cho local repository<br />
 
+**Git pull is rejected: ! [rejected]        main -> main (non-fast-forward)** <br />
+-> using: git pull --rebase
