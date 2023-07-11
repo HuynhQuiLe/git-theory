@@ -24,6 +24,7 @@
 **Step 1: at LOGIN branch, we must commit:** git add -A && git commit -m ""<br />
 **Step 2: switch to MAIN branch - the branch we need to have new code:** git checkout main<br />
 **Step 3: at LOGIN branch, merge the code:** git merge login<br />
+**Step 4: push into remote - MAIN branch** git add -A && git commit -m  && git push<br />
 
 
 <br />
