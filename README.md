@@ -12,7 +12,17 @@
   git push (from 2nd push) <br />
 <br />
 <br />
+**BRANCH** <br />
+<br />
+**LIST BRANCH:** git branch<br />
+**CREATE NEW BRANCH only:** git branch login <br />
+**SWITCH BRANCH only:** git checkout login <br />
+**CREATE NEW BRANCH from current branch and SWITCH to the new branch:** git checkout -b login <br />
+**DELETE BRANCH:** git branch -D login <br />
+
+<br />
+<br />
 **NOTE** <br />
 <br />
 **REMOVE ORIGIN:** git remove origin<br />
-**CREATE BRANCH:** <br />
+
