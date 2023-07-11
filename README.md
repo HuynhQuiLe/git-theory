@@ -20,6 +20,12 @@
 **CREATE NEW BRANCH from current branch and SWITCH to the new branch:** git checkout -b login <br />
 **DELETE BRANCH:** git branch -D login <br />
 
+**MERGE LOGIN TO MAIN - update MAIN with the code of LOGIN**<br />
+**Step 1: at LOGIN branch, we must commit:** git add -A && git commit -m ""<br />
+**Step 2: switch to MAIN branch - the branch we need to have new code:** git checkout main<br />
+**Step 3: at LOGIN branch, merge the code:** git merge login<br />
+
+
 <br />
 <br />
 **NOTE** <br />
