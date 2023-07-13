@@ -17,7 +17,9 @@
 **BRANCH** <br />
 <br />
 **LIST BRANCH:** git branch<br />
+**LIST BRANCH FROM ROMOTE:** git branch -r<br />
 **CREATE NEW BRANCH only:** git branch login <br />
+**BEFORE SWITCHING ANOTHER BRANCH - WE SHOULD SYNC**: git fetch <br />
 **SWITCH BRANCH only:** git checkout login <br />
 **CREATE NEW BRANCH from current branch and SWITCH to the new branch:** git checkout -b login <br />
 **DELETE BRANCH:** git branch -D login <br />
@@ -50,7 +52,10 @@
 **RESTORE THE OLD CODE** <br />
 <br />
 **undo the lastest code campare with the last commit :** git stash<br />
-**undo the old code from old commit:** git <br />
+**undo the old code from old commit:** <br />
+    **S1:find the id of the old version and Copy** git log <br/>
+    **S2:get the old code** git checkout id<br/>
+    now it will automatically create new history branch, so from here we can checkout to new branch and code or code in this branch, it depend
 
 <br />
 <br />
