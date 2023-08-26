@@ -74,3 +74,25 @@ cập nhật cho local repository<br />
 
 **Git pull is rejected: ! [rejected]        main -> main (non-fast-forward)** <br />
 -> using: git pull --rebase
+<br/>
+<br/>
+
+<br/>
+
+<br/>
+
+<br/>
+
+<br/>
+
+-----------------------------------
+<br/>
+**CSS TEXT LIMITED LINE: 
+ style={{
+        overflow: "hidden",
+        textOverflow: "ellipsis",
+        display: "-webkit-box",
+        lineClamp: 2,
+        WebkitLineClamp: 2,
+        WebkitBoxOrient: "vertical",
+    }}
