@@ -61,7 +61,7 @@
 <br />
 **NOTE** <br />
 <br />
-**REMOVE ORIGIN:** git remove origin<br />
+**REMOVE ORIGIN:** git remote remove origin<br />
 **REVIEW COMMIT HISTORY:** git log<br />
 **COMPARE CLONE & PULL** <br />
 git clone<br />
