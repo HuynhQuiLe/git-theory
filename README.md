@@ -1,20 +1,27 @@
-# back-end-theory
+# BACK-END-THEORY
 **USUALLY USE** <br />
 <br />
-**Step 1: tải MYSQL BẰNG CÂU LỆNH TERMINAL:** docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=1234 -d -p 3306:3306 mysql<br />
+**Tải MYSQL BẰNG CÂU LỆNH TERMINAL:** docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=1234 -d -p 3306:3306 mysql <br />
 
-**Step 2: link repo-local with repo-remote:**  git remote add origin https://github.com/HuynhQuiLe/samar.git
 
-**Step 3: Push code into remote :**  <br />
-  git add -A <br />
-  git commit -m "content" <br />
-  git push -u origin main (1st push - compare with when *remote haven't had the branch*  ) <br />
-  git push (from 2nd push) <br />
+**5 THONGN TIN KHI CAI DAT VAO MAY, BAT BUOC PHIA NHO** <br />
+1. **HOST**: localhost ||127.0.0.1 <br/>
+2. **username**: root (quyen cao nhat) <br/>
+3. **password**: 1234 <br/>
+4. **port**: 3306 (neu cai roi thi 3307) <br/>
+5. update sau <br/>
 <br />
 <br />
-
-
-**BRANCH** <br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 <br />
 **LIST BRANCH:** git branch<br />
 **LIST BRANCH FROM ROMOTE:** git branch -r<br />
