@@ -23,83 +23,118 @@
 <br />
 <br />
 <br />
-**LIST BRANCH:** git branch<br />
-**LIST BRANCH FROM ROMOTE:** git branch -r<br />
-**CREATE NEW BRANCH only:** git branch login <br />
-**BEFORE SWITCHING ANOTHER BRANCH - WE SHOULD SYNC**: git fetch <br />
-**SWITCH BRANCH only:** git checkout login <br />
-**CREATE NEW BRANCH from current branch and SWITCH to the new branch:** git checkout -b login <br />
-**DELETE BRANCH:** git branch -D login <br />
+#lenh SQL
+# QUY TAC 
+# - khong khoang cach, ky tu dac biet, khong viet hoa, khong chu so dau tien 
+# - dat ten bang quy tac snake key. vidu: nguoi_dung, 
 
-**MERGE LOGIN TO MAIN - update MAIN with the code of LOGIN**<br />
-**Step 1: at LOGIN branch, we must commit:** git add -A && git commit -m ""<br />
-**Step 2: switch to MAIN branch - the branch we need to have new code:** git checkout main<br />
-**Step 3: at LOGIN branch, merge the code:** git merge login<br />
-**Step 4: push into remote - MAIN branch** git add -A && git commit -m  && git push<br />
+#TAO DATABASE MOI
+# . viet hoa mau xanh duong la LENH SQL
+CREATE DATABASE db_node37;
+#chay database bang cach:
+#1/ to khoi
+#2/ nhan run current 
+#3/ nhan reset 
+
+#CHON DATA BASE DE THAO TAC 
+USE db_node37;
+
+#lenh tao table 
+#users: user_id, user_name, email, age
+CREATE TABLE users(
+	user_id INT, 
+	user_name VARCHAR(255), 
+	email VARCHAR(255), 
+	age INT(250)
+);
+
+#xoa table, database
+DROP DATABASE db_node37;
+DROP TABLE users;
+
+DROP DATABASE IF EXISTS db_node37;
+
+#CHINH SUA TABLE
+#1/them cot
+ALTER TABLE users
+ADD COLUMN birth_day DATETIME;
+
+ALTER TABLE users
+ADD COLUMN user_status BOOLEAN;
 
 
-<br />
-<br />
-**CLONE** <br />
-<br />
-**Step 1: clone git from remote - crate "child folder" inside the folder at terminal:** git clone https://github.com/quangsiDev/demo_git -> repo is "child folder" so we must be cd into "child folder"<br />
-**Step 1.1: clone git from remote - put "all file" inside the folder at terminal:** git clone https://github.com/quangsiDev/demo_git .<br />
-**Step 2: create new branch and code in the new one :** git checkout -b new<br />
---> if whne we code in new and fail -> come to main -> clone code again -> careate new branch -> code in the new one again
+#2/ xoa cot
+ALTER TABLE users
+DROP COLUMN birth_day;
+
+#3/ chinh sua cot
+ALTER TABLE users
+MODIFY COLUMN birth_day DATE;
 
 
-<br />
-<br />
-**PULL** <br />
-<br />
-**Step 1: get latest code :** git pull<br />
 
-<br />
-<br />
-**RESTORE THE OLD CODE** <br />
-<br />
-**undo the lastest code campare with the last commit :** git stash<br />
-**undo the old code from old commit:** <br />
-    **S1:find the id of the old version and Copy** git log <br/>
-    **S2:get the old code** git checkout id<br/>
-    now it will automatically create new history branch, so from here we can checkout to new branch and code or code in this branch, it depend
 
-<br />
-<br />
-**NOTE** <br />
-<br />
-**REMOVE ORIGIN:** git remote remove origin<br />
-**REVIEW COMMIT HISTORY:** git log<br />
-**COMPARE CLONE & PULL** <br />
-git clone<br />
-Lệnh này sẽ sao chép toàn bộ dữ liệu và thiết lập trên remote repository, tức là
-nó sẽ tự động tạo một local repository trên máy tính của bạn sau khi chạy lệnh.
-Lệnh này *chỉ nên sử dụng khi bạn cần tạo mới một dự án Git* trên máy tính.<br />
-• git pull<br />
-Lệnh này sẽ chỉ *lấy những dữ liệu có sự thay đổi từ remote repository* đem về
-cập nhật cho local repository<br />
+#CRUD delete --- DUNG CHO ROWS
+#1/Create => them data
+INSERT INTO users(user_id, user_name, email, age, birth_day, user_status) VALUES 
+				 (1, 'Chris Le', 'chris@gnail.com', 27, '1996-10-25', 0),
+				 (2, 'Nam Le', 'nam@gnail.com', 56, '1923-10-05', 1),
+				 (3, 'David', 'david@gnail.com', 17, '2003-07-25', 0);
 
-**Git pull is rejected: ! [rejected]        main -> main (non-fast-forward)** <br />
--> using: git pull --rebase
-<br/>
-<br/>
 
-<br/>
 
-<br/>
+#2/Read
+SELECT *
+FROM users #=> 2 daong dau laf lay tat ca
+WHERE user_id = 3 #=>chi lay 1 thang
+ORDER BY user_id #=> sap xep theo email, age .... =>TU BE TOI LON
+ORDER BY user_id DESC #=> sap xep theo email, age .... =>TU LON TOI BE
 
-<br/>
 
-<br/>
 
------------------------------------
-<br/>
-**CSS TEXT LIMITED LINE: 
- style={{
-        overflow: "hidden",
-        textOverflow: "ellipsis",
-        display: "-webkit-box",
-        lineClamp: 2,
-        WebkitLineClamp: 2,
-        WebkitBoxOrient: "vertical",
-    }}
+
+#3/Update => thay doi toan bo
+UPDATE users SET age=1, email='abc'; #=> update toan bo
+UPDATE users SET age=1, email='abc' WHERE user_id = 1; #where giong if - nhung chi co 1 dau = CHI UPDATE 1 THANG DUY NHAT
+
+
+
+
+#4/Delete => thay doi toan bo
+DELETE FROM users; #=> xoa taon bo
+DELETE FROM users WHERE user_id = 1; #=>xoa 1 thang duy nhat => khong duoc dung khi di lam =>SU DUNG UPDATE DE AN NO DI
+
+
+####CACH XOA BANG CACH UPDATE
+UPDATE users SET user_status = 1 WHERE user_id = 3
+
+SELECT *
+FROM users
+WHERE user_status = 1
+# =< no chi hien nhung thang active ra thoi
+
+
+#WHERE ma co dau = laf so sanh tuyet doi, co the dung LIKE: WHERE user_status LIKE 1 => = va LIKE la giong nhau - so sanh tuyet doi
+#neu muon so sanh, lay trong chuoi do, chi can ton lai ky tu nay la lay ra thi dung: WHERE user_name LIKE '%abc%'
+SELECT *
+FROM users
+WHERE user_name = 'abc'
+WHERE user_name LIKE 'abc'
+WHERE user_name LIKE '%abc%' #=>chuc nang tiem kiem
+WHERE user_name LIKE 'abc%' #=>tiem kiem nhung thang nao bat dau bang tu khoa 'abc'
+WHERE user_name LIKE '%abc' #=>tiem kiem nhung thang nao ket thuc bang tu khoa 'abc'
+
+
+SELECT * #=> lay het tat ca column
+
+SELECT user_name, user_status, email #=> chi lay nhung thang duoc liet ke ra
+
+
+GROUP BY
+HAVING
+
+
+
+
+
+
