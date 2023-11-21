@@ -197,8 +197,9 @@ DATABASE FIRST <br/>
 yarn add sequelize-auto <br/>
 
 <br/>
-run: yarn sequelize-auto -h <host> -d <database> -u <user> -x [password] -p [port] --dialect [dialect] -o [/path/to/models] -l es6
-<br/>
+run: yarn sequelize-auto -h <host> -d <database> -u <user> -x [password] -p [port] --dialect [dialect] -o [/path/to/models] -l es6 <br/>
+=>>>> yarn sequelize-auto -h localhost -d youtube_app -u root -x 1234 -p 3306 --dialect mysql -o src/models -l es6 (es6 la co reuired, cin neu muoon viet theo moudle thi es6 => esm)
+<br/> moi lan thay doi database - them cot hoac table  => chay lai dong nay
 <br/>
 <br/>
 
