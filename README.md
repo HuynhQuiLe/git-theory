@@ -132,9 +132,63 @@ SELECT user_name, user_status, email #=> chi lay nhung thang duoc liet ke ra
 
 GROUP BY
 HAVING
+<br/>
+<br/>
 
 
 
+#THONG TIN CO BAN BE <br/>
+<br/>
+// LY THUYET <br/>
+app.get("/demo/:id1/:email1", (req, res) => { <br/>
+  // C1: LAY TU URL <br/>
+  //   - query string: domain/demo?id=123&email=demo@gmail.com <br/>
+  const { id, email } = req.query; <br/>
+<br/>
+  //   - query param: domain/demo/123/demo@gmail.com => phai dinh nghia param o dong 7 <br/>
+  const { id1, email1 } = req.params; <br/>
+<br/>
+  //C2: LAY TU JSON <br/>
+  let { name, age, role } = req.body; <br/>
+<br/>
+  //   res.send("Hello"); <br/>
+  res.status(200).json({ name, age, role }); <br/>
+}); <br/>
+<br/>
+app.listen(PORT, (req, res) => { <br/>
+  console.log(`Server is running on  PORT ${PORT}`); <br/>
+});<br/>
+<br/>
+// KET NOI VOI CSDL  bang cach truyen thong<br/>
+<br/>
+const mysql2 = require("mysql2");<br/>
+<br/>
+const connect = mysql2.createConnection({ <br/>
+  host: "localhost",<br/>
+  user: "root",<br/>
+  password: "1234",<br/>
+  port: 3306,<br/>
+  database: "youtube_app",<br/>
+});<br/>
+
+app.get("/get-video", (req, res) => {<br/>
+<br/>
+  // su dung cach truyen thong<br/>
+  try {<br/>
+    connect.query("SELECT * FROM video", (err, result) => {<br/>
+      //cau lenh lay duoc bang do ra<br/>
+      res.status(200).json(result);<br/>
+    });<br/>
+  } catch (error) {<br/>
+    res<br/>
+      .status(400)<br/>
+      .json({ message: "Đã có lỗi xảy ra, không tìm thấy tài nguyên." });<br/>
+  }<br/>
+}, );<br/>
 
 
+<br/>
+<br/>
+<br/>
+<br/>
 
