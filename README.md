@@ -192,3 +192,16 @@ app.get("/get-video", (req, res) => {<br/>
 <br/>
 <br/>
 
+DATABASE FIRST <br/>
+
+yarn add sequelize-auto <br/>
+
+<br/>
+run: yarn sequelize-auto -h <host> -d <database> -u <user> -x [password] -p [port] --dialect [dialect] -o [/path/to/models] -l es6
+<br/>
+<br/>
+<br/>
+
+
+
+
