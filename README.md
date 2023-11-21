@@ -224,4 +224,20 @@ de su dung LIKE %% thi:
  		}<br/>
 }); <br/>
 
+neu muon lay 1 so cot nhat dinh thoi: SELECT video_id, video_name FROM video <br/>
+<br/>let data = await model.video.findAll({ <br/>
+	where: {<br/>
+ 		video_id: 2
+ 		}<br/>
+	},
+ attributes: ["video_id", "video_name"]
+ 
+ ); <br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
 
