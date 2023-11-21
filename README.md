@@ -201,8 +201,27 @@ run: yarn sequelize-auto -h <host> -d <database> -u <user> -x [password] -p [por
 =>>>> yarn sequelize-auto -h localhost -d youtube_app -u root -x 1234 -p 3306 --dialect mysql -o src/models -l es6 (es6 la co reuired, cin neu muoon viet theo moudle thi es6 => esm)
 <br/> moi lan thay doi database - them cot hoac table  => chay lai dong nay
 <br/>
+
+  let data = await model.video.findAll(); //thay the cho SELECT * FROM video 
 <br/>
+neu muon co WHERE thi: <br/>
+let data = await model.video.findAll({ <br/>
+	where: {<br/>
+ 		video_id: 2
+ 		}<br/>
+}); <br/>
 
-
+<br/>
+de su dung LIKE %% thi:
+<br/> import {Sequelize} from 'sequelize'
+<br/> let Op = Sequelize.Op
+<br/> let data = await model.video.findAll({ <br/>
+	where: {<br/>
+ 		video_id: 2, <br/>
+   		video_name: { <br/>
+     			[Op.like]: '%code%' <br/>
+		}<br/>
+ 		}<br/>
+}); <br/>
 
 
