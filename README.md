@@ -235,7 +235,8 @@ neu muon lay 1 so cot nhat dinh thoi: SELECT video_id, video_name FROM video <br
  
  ); <br/>
 <br/>
-<br/>
+khi lien ket data cau 2 hoac nhieu table thi co the dung  include: ["user", "type"], **user duoc lay trong init-models, giong 100% as
+<br/> hoac co the dung include:[model.user, model.video_type] => phai xoa as trong init-models
 <br/>
 <br/>
 <br/>
