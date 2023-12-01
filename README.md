@@ -241,5 +241,52 @@ khi lien ket data cau 2 hoac nhieu table thi co the dung  include: ["user", "typ
 <br/>
 <br/>
 <br/>
+BCRYPT
 
+<br/>1. cho phep ma hoa
+<br/><br/> bcrypt.hashSync(pass_word, 10),
+<br/>2. cho phep so anh du lieu tho vs du lieu ma hoa
+<br/> (bcrypt.compareSync(pass_word, emailExist.pass_word) => tham so 1 la du lieu tho, tham so 2 la du lieu da ma hoa
+<br/><br/>
+<br/>
+JWT
+<br/><br/> 1. ma hoa du lieu
+<br/> 2. kiem tra token hop le
+<br/><br/> 3. giai token
+<br/>
+<br/> luoon luoon co 3 pahn de tao ra token, mooix cai ngan cach bang dau cham (.)
+<br/> 1. HEADER: chua giai thuat, han su dung... (cau hinh)
+<br/> 2. PAYLOAD: DATA
+<br/>3. SIGNATURE: khoa bi mat
+<br/>
+<br/>
+<br/>1. ma hoa du lieu<br/>
+createToken: (data) => {<br/>
+    let token = jwt.sign({ data }, "BIMAT", { algorithm: "HS256" });<br/> => TS1: PAYLOAD; TS 2: SIGNATURE; TS3: HEADER
+    return token;<br/>
+  },<br/>
+
+  <br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/><br/> UPLOAD HINH ANH
+<br/> c1: luu tran sOurce BE
+<br/>c2: luu tran sOurce ben thu 3
+<br/>c3: luu truc tiep tren column cua table
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/>
 
