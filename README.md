@@ -3,6 +3,10 @@
 <br />
 **Luong di:** module > controller > service<br />
 
+**module:** dung de ket noi controller va service
+**controller:**  dinh nghia API khac voi Express(dinh ghia cac chuc nang, nghiep vu...) === **Router** cua express<br />
+**service:**  dinh nghia cac chuc nang, nghiep vu...<br />
+
 **Lệnh tạo module nhanh:**  nest g module [tên module] <br />
 **Lệnh tạo controller nhanh:**  nest g controller [tên module] --no-spec <br />
 **Lệnh tạo service nhanh:**  nest g service [tên module] <br />
@@ -42,17 +46,44 @@ ConfigModule.forRoot({ <br />
 <br /> npx prisma db pull
 <br /> npx prisma generate
 
+<br /><br />
+<br /><br />
+<br /><br />
+<br /><br />
+<br /><br />
 
 
 
+<br /><br />UPLOAD PHOTO
+<br /><br /> npm i @types/multer
+<br />
+<br />
+<br /><br /> tu controller cua thang nao can dung middleware thi: <br />
+ up 1 tam :single<br />
+@UseInterceptors(<br />
+    FileInterceptor('avatar', {<br />
+      storage: diskStorage({<br />
+        destination: process.cwd() + '/public/img',<br />
+        filename: (req, file, callback) =><br />
+          callback(null, new Date().getTime() + '_' + file.originalname),<br />
+      }),<br />
+    }),<br />
+  )<br />
+<br /><br />
+<br /><br />
+ up nhieu tam :multiple<br />
+@UseInterceptors(<br />
+    FilesInterceptor('avatar', 3 ,{<br /> 
+      storage: diskStorage({<br />
+        destination: process.cwd() + '/public/img',<br />
+        filename: (req, file, callback) =><br />
+          callback(null, new Date().getTime() + '_' + file.originalname),<br />
+      }),<br />
+    }),<br />
+  )<br />
+<br /><br />
+<br /><br />
 
-
-
-
-
-
-**controller:**  dinh nghia API khac voi Express(dinh ghia cac chuc nang, nghiep vu...) === **Router** cua express<br />
-**service:**  dinh nghia cac chuc nang, nghiep vu...<br />
 
 **Step 3: Push code into remote :**  <br />
   git add -A <br />
