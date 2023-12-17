@@ -69,6 +69,10 @@ ConfigModule.forRoot({ <br />
       }),<br />
     }),<br />
   )<br />
+  @Post('/upload')<br />
+  uploadPhoto(@UploadedFile() file: Express.Multer.File) {<br />
+    return this.userService.uploadPhoto(file);<br />
+  }<br />
 <br /><br />
 <br /><br />
  up nhieu tam :multiple<br />
@@ -81,10 +85,62 @@ ConfigModule.forRoot({ <br />
       }),<br />
     }),<br />
   )<br />
-<br /><br />
+  @Post('/upload')<br />
+  uploadPhoto(@UploadedFiles() file: Express.Multer.File[]) {<br />
+    return this.userService.uploadPhoto(file);<br />
+  }<br />
+<br />{FilesInterceptor =>>> co "s"} va them tham so thu 2 la so tam hinh cho phep;@UploadedFiles() =>> co "s" va Express.Multer.File[] =>> co []<br /> 
 <br /><br />
 
 
+<br /><br />
+<br /><br />
+<br /><br />
+<br /><br />
+<br /><br />
+<br /><br />
+<br /><br />
+<br /><br />
+<br /><br />
+<br /><br />
+<br /><br />
+<br /><br />
+**SWAGGER:**  <br />
+<br /><br />  yarn add @nestjs/swagger swagger-ui-express HOAC  npm i @nestjs/swagger swagger-ui-express
+<br /><br /> qua main.ts
+<br /><br /> const config = new DocumentBuilder().setTitle('Node 37 - version 0.0.1').build();<br />
+  const document = SwaggerModule.createDocument(app, config);<br />
+  SwaggerModule.setup('/swagger', app, document);<br />
+  <br />
+ Gom nhom API lai thi vao controller cho no decorater <br />
+@ApiTags('User')<br />
+@Controller('user')<br />
+<br />
+<br />
+<br />
+<br />
+
+
+
+
+
+
+
+
+
+
+<br /><br />
+<br /><br />
+<br /><br />
+<br /><br />
+<br /><br />
+<br /><br />
+<br /><br />
+<br /><br />
+<br /><br />
+<br /><br />
+<br /><br />
+<br /><br />
 **Step 3: Push code into remote :**  <br />
   git add -A <br />
   git commit -m "content" <br />
