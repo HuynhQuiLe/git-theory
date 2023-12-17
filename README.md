@@ -1,9 +1,58 @@
 # git-theory
-**USUALLY USE** <br />
+**NestJS** <br />
 <br />
-**Step 1: create repo local:** git innit<br />
+**Luong di:** module > controller > service<br />
 
-**Step 2: link repo-local with repo-remote:**  git remote add origin https://github.com/HuynhQuiLe/samar.git
+**Lệnh tạo module nhanh:**  nest g module [tên module] <br />
+**Lệnh tạo controller nhanh:**  nest g controller [tên module] --no-spec <br />
+**Lệnh tạo service nhanh:**  nest g service [tên module] <br />
+<br />
+<br />
+
+=>>>>>>**Lệnh tạo nhanh ca 3 file:**  nest g resource [tên module] --no-spec <br />
+
+ <br /> DTO(data transfer object): giup khia bao nhung cai type it hoac nhieu hon type ban dau
+  <br /> DTO: giup khia bao nhung cai type it hoac nhieu hon type ban dau
+  <br />  <br />  <br />  <br />  <br />
+
+=>>>>>>**Su dung bien moi truong:**  npm i @nestjs/config <br />
+<br /> them vao moudule thang cha lon nhat: app.module.ts ====>>> 
+ConfigModule.forRoot({ <br />
+      isGlobal: true, <br />
+    }), <br />
+ <br /> gan vao controller cua cai muon xai
+  <br /> su dung: this.configService.get('ten bien')
+
+<br />
+<br /><br />
+<br /><br />
+<br /><br />
+<br /><br />
+<br /><br />
+<br /><br />
+<br />
+**LAY DU LIEU TU DATABASE**<br />
+<br /> su dung cac ORM: sequlize / prisma
+<br />
+<br />
+**PRISMA:**<br />
+<br /> npm i prisma @prisma/client
+<br /> npx prisma init
+<br /> vao .env su thong tin dnag nhap: chuoi ket noi (DATABASE_URL="mysql://root:1234@localhost:3306/youtube_app?schema=public") va file schema ("mysql")
+<br /> npx prisma db pull
+<br /> npx prisma generate
+
+
+
+
+
+
+
+
+
+
+**controller:**  dinh nghia API khac voi Express(dinh ghia cac chuc nang, nghiep vu...) === **Router** cua express<br />
+**service:**  dinh nghia cac chuc nang, nghiep vu...<br />
 
 **Step 3: Push code into remote :**  <br />
   git add -A <br />
