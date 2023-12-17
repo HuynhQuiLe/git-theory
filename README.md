@@ -288,5 +288,21 @@ createToken: (data) => {<br/>
 <br/><br/>
 <br/><br/>
 <br/><br/>
-<br/>
+<br/> **PRISMA CHUC NANG SERACH**:
 
+let user = await this.prisma.users.findMany({<br/>
+      where: {<br/>
+        full_name: {<br/>
+          contains: full_name,<br/>
+        },<br/>
+      },<br/>
+    });<br/>
+
+
+
+><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
