@@ -119,8 +119,8 @@ ConfigModule.forRoot({ <br />
 <br />
 <br />
 <br />
-
-
+**TOKEN BANG NESTJS:**  <br />
+npm i @nestjs/config @nestjs/passport passport passport-local @nestjs/jwt passport-jwt @types/passport-jwt  <br />
 
 
 
@@ -135,6 +135,10 @@ ConfigModule.forRoot({ <br />
 <br /><br />
 <br /><br />
 <br /><br />
+
+
+
+
 <br /><br />
 <br /><br />
 <br /><br />
